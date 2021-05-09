@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles'
 import { AppBar, Collapse, IconButton, Toolbar } from '@material-ui/core'
-import SortIcon from '@material-ui/icons/Sort'
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link as Scroll } from 'react-scroll'
 
@@ -19,6 +20,14 @@ const useStyles = makeStyles((theme) => ({
     },
     icon: {
         color: '#0000FF',
+        fontSize: '2rem',
+    },
+    insta: {
+        color: '#C3144F',
+        fontSize: '2rem',
+    },
+    wpp: {
+        color: '#008000',
         fontSize: '2rem',
     },
     appbarTitle: {
@@ -59,8 +68,17 @@ export default function Header() {
                     <h1 className={classes.appbarTitle} >
                         Talk&<span className={classes.colorText}>Learn</span>.
                         </h1>
+
+
                     <IconButton>
-                        <SortIcon className={classes.icon} />
+                        <a href="https://www.instagram.com/talkandlearnidiomas/" target="blank">
+                            <InstagramIcon className={classes.insta} />
+                        </a>
+                    </IconButton>
+                    <IconButton>
+                        <a href="https://api.whatsapp.com/send?phone=55318655-4463" target="blank">
+                            <WhatsAppIcon className={classes.wpp} />
+                        </a>
                     </IconButton>
                 </Toolbar>
             </AppBar>
